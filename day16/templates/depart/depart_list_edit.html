@@ -1,0 +1,24 @@
+{% extends 'model.html' %}
+
+{% block content %}
+  <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">修改部门</div>
+            <div>
+                <form action="/{{ obj.ID }}/edit/" method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">部门ID</label>
+                        <input type="text" name="ID" class="form-control" value="{{ obj.ID }}">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">部门名称</label>
+                        <input type="部门名称" name="title" class="form-control" value="{{ obj.title }}">
+                    </div>
+                    <button type="submit" class="btn btn-default">添加</button>
+                </form>
+            </div>
+        </div>
+        </div>
+{% endblock %}
+

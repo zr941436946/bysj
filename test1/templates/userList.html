@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户列表</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>编号</td> <td>姓名</td> <td>年龄</td><td>操作</td>
+        </tr>
+        {% for obj in userlistt %}
+        <tr>
+            <td>{{ obj.id }}</td> <td>{{ obj.name }}</td> <td>{{ obj.age }}</td>
+            <td><a href="/userList/user_delete?id={{ obj.id }}">删除</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="user_add">添加用户</a>
+    <h1> {{ xh }}</h1>
+
+
+</body>
+</html>
